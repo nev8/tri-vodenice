@@ -283,3 +283,134 @@ header h1::after {
     color: var(--crvena);
     margin-right: 10px;
 }
+
+/***** Brojke *****/
+.brojke {
+    padding: 60px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/header2.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.brojke article {
+    flex: 0 0 20%;
+}
+.brojke article h5 {
+    font-size: 5rem;
+    font-weight: 300;
+}
+.brojke article h5::after {
+    content: "";
+    display: block;
+    background: var(--crvena);
+    height: .5px;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.brojke article p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+/***** Smestaj *****/
+.smestaj {
+    text-align: center;
+    padding: 60px 120px;
+    background: rgb(251, 251, 251);
+    margin-bottom: -100px;
+}
+.smestaj p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.smestaj .owl-theme {
+    z-index: 0;
+}
+
+/***** Baner avantura *****/
+.avantura {
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(img/dodaci1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/***** Hrana *****/
+.hrana {
+    padding: 60px 120px;
+    text-align: center;
+    background: ;
+}
+.hrana h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hrana article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+.hrana article div {
+    flex: 0 0 30%;
+    background: rgb(251, 251, 251);
+}
+.hrana .owl-theme {
+    z-index: 0;
+}
+
+/***** Aktivnosti *****/
+.aktivnosti {
+    background: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.2)), url(img/tara.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 110vh;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aktivnosti article {
+    width:90%;
+    text-align: center;
+    margin: auto;
+    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)); 
+    border-radius: 5px; 
+}
+.aktivnosti article h2 {
+    padding-top: 30px;
+}
+.aktivnosti article p {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+.aktivnosti article .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.aktivnosti article .box .part {
+    flex: 0 0 23%;
+}
+.aktivnosti article .box .part i {
+    color: var(--crvena);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.aktivnosti article .box .part div h3 {
+    font-size: 1.5rem;
+}
+.aktivnosti article .box .part div p {
+    font-size: .8rem;
+}
