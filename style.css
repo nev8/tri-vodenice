@@ -6,9 +6,11 @@
     --fontFamiliHeadings: 'Roboto', sans-serif; */
     --fontFamily1:'Catamaran', sans-serif;
     --fontFamily2:'Oswald', sans-serif;
-    --crvena: #f25335; 
+    /* --crvena: #f25335;  */
+    --crvena: #169137; 
     --krem-roze: #f4eee1;
     --transition: 0.4s ease;
+    --siva: #999999;
 }
 /***** Basic styles *****/
 * {
@@ -73,6 +75,7 @@ header nav {
 }
 header nav article:first-child {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 80%;
@@ -91,7 +94,18 @@ header nav article:first-child a {
 header nav article:first-child a:hover {
     color: var(--crvena);
 }
-
+.menu {
+    border: none;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background: var(--crvena);
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: var(--transition);
+    display: none;
+    margin-bottom: 10px;
+}
 header nav article:last-child {
     width: 80%;
     padding: 10px 40px 5px;
@@ -103,7 +117,7 @@ header nav article:last-child {
 header nav article:last-child a img {
     width: 50%;
     height: 80%;
-    object-fit: cover;
+    object-fit: cover; 
 }
 header nav article:last-child a {
     text-decoration: none;
@@ -245,6 +259,9 @@ header h1::after {
     flex-direction: column; 
     margin-bottom: 40px;
 }
+.ponuda article .col:nth-child(7) h4, .ponuda article .col:nth-child(7) span {
+    font-size: .9rem;
+}
 .ponuda article .col:hover {
     box-shadow: none;
     border: .2px solid gray;
@@ -257,13 +274,14 @@ header h1::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 200px;
 }
 .ponuda article .col .text {
     flex: 0 0 59%;
 }
 .ponuda article .text h4 {
     padding: 20px 0 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .ponuda article .text h4 span {
     color: var(--crvena);
@@ -278,6 +296,7 @@ header h1::after {
 }
 .ponuda li {
     flex: 0 0 30%;
+    font-size: .9rem;
 }
 .ponuda i {
     color: var(--crvena);
@@ -288,6 +307,7 @@ header h1::after {
 .brojke {
     padding: 60px 120px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 35vh;
@@ -355,6 +375,7 @@ header h1::after {
 }
 .hrana article {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 40px 0;
@@ -395,6 +416,7 @@ header h1::after {
 }
 .aktivnosti article .box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -413,4 +435,361 @@ header h1::after {
 }
 .aktivnosti article .box .part div p {
     font-size: .8rem;
+}
+
+/***** Teambuilding *****/
+.teambuilding {
+    text-align: center;
+    padding: 60px 120px;
+    background: rgb(251, 251, 251);
+}
+.teambuilding article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:50px;
+}
+.teambuilding article .box {
+    flex: 0 0 48%;
+}
+.teambuilding article .box:first-child img {
+    width: 100%;
+}
+.teambuilding article .box:last-child h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+.teambuilding article .box:last-child p {
+    margin-bottom: 10px;
+}
+.teambuilding article .box:last-child i {
+    color: var(--crvena);
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+.teambuilding article .box:last-child button {
+    margin-top: 20px;
+}
+
+/***** Kako do nas? *****/
+.kako {
+    text-align: center;
+    padding: 60px 120px;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,.9)), url(img/O9FG4R0.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.kako article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.kako article div {
+    flex: 0 0 48%;
+}
+.kako article .city{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+}
+.kako article .city .col {
+    flex: 0 0 49%;
+    text-align: left;
+}
+.kako article .city .col p {
+   padding-bottom: 30px;
+   font-size: 1.1rem;
+}
+.kako article .city .col span {
+    margin-left: 20px;
+    color: var(--crvena);
+    font-weight: 600;
+}
+.kako article iframe {
+    margin-top: 30px;
+}
+.kako h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    color: var(--crvena);
+}
+/* .kako form input {
+    border: 1px solid black;
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+} */
+
+/***** Kontakt forma *****/
+.kontakt {
+    padding: 60px 120px;
+}
+.kontakt article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.kontakt article div:first-child {
+    flex: 0 0 60%;
+    text-align: center;
+}
+.kontakt article div:first-child p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+.kontakt article div:first-child form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.kontakt article div:first-child form #aranzman, #izlet {
+    flex: 0 0 49%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.kontakt article div:first-child form input:nth-child(1), .kontakt article div:first-child form input:nth-child(2) {
+    flex: 0 0 49%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.kontakt article div:first-child form input:nth-child(3), .kontakt article div:first-child form input:nth-child(4), .kontakt article div:first-child form input:nth-child(5), .kontakt article div:first-child form input:nth-child(6) {
+    flex: 0 0 24%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.kontakt article div:first-child form textarea {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.kontakt article div:first-child form button {
+    width: 100%;
+}
+
+.kontakt article div:last-child {
+    flex: 0 0 40%;
+}
+.kontakt img {
+    width: 100%;
+}
+
+/***** Footer *****/
+footer {
+    /* background: var(--siva); */
+    background: #EDEBE8;
+    height: 35vh;
+    color: black;
+    padding: 50px 200px;
+}
+footer article {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer article h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+footer article div:nth-child(2) a, div:nth-child(3) a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: .9rem;
+    padding-bottom: 10px;
+}
+footer article div:nth-child(4) a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--crvena);
+    padding: 0px 5px 0px 10px;
+    font-size: 1.5rem;
+}
+footer .copy {
+    color: var(--crvena);
+    font-size: .9rem;
+    margin-top: 40px;
+    text-align: center;
+    font-family: var(--fontFamily2);
+    font-weight: 500;
+}
+/***** Responsive *****/
+@media(max-width:767px) {
+    header h1 {
+        font-size: 2.3rem;
+        padding: 410px 0 0 13%;  
+    }
+    header nav article:first-child a {
+        flex: 0 0 49%;
+        font-size: .6rem;
+        width: 100%;
+        padding: 5px 0;
+        text-align: center;
+    }
+    header nav article:last-child a img {
+        width: 70%;
+        height: 100%;
+    }
+    header .menu {
+        display: inline-block;
+    }
+    header nav article:last-child.menu-toggle {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        z-index: 90;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: var(--transition);
+    }
+    header .bigMenu {
+        display: none;
+    }
+    header .reservation {
+        width: 100%;
+        font-size: .8rem;
+        padding: 5px 5px;
+    }
+    .oNama, .brojke, .smestaj, .hrana, .aktivnosti, .kako {
+        padding: 40px 20px;    
+    }
+    .oNama h3, .baner h3, .ponuda h3, .hrana h3 {
+        font-size: 1.5rem;
+    }
+    /* .oNama p {
+        text-align: justify;
+    } */
+    .oNama .col i {
+        font-size: 1rem;  
+    }
+    .oNama .col div {
+        flex:0 0 60%;
+    }
+    .oNama .col div h4 {
+        font-size: 1.1rem;
+    }
+    .baner { 
+        padding: 50px 30px 60px;
+    }
+    /* .baner p {
+        text-align: justify;
+    } */
+    .ponuda{
+        padding: 40px 20px 20px;
+    }
+    .ponuda article .col {
+        flex: 0 0 100%;
+        min-height: 370px;
+    }
+    .brojke {
+        height: auto;
+    }
+    /* .brojke article {
+        flex: 0 0 100%;
+    } */
+    .brojke article h5 {
+        font-size: 2rem;
+    }
+    .brojke article p {
+        font-size: 0.8rem;
+    }
+    .hrana article div {
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+    }
+    .avantura {
+        height: 55vh;
+    }
+    .aktivnosti {
+        height: auto;
+    }
+    .aktivnosti article {
+        width:98%;
+    }
+    .aktivnosti article .box .part {
+        flex: 0 0 100%;
+    }
+    .teambuilding {
+        padding: 40px 20px 10px;
+    }
+    .teambuilding article .box {
+        flex: 0 0 100%;
+    }
+    .teambuilding article .box:first-child {
+        margin-bottom: 30px;
+    }
+    .teambuilding article .box:last-child > p {
+        margin-bottom: 30px;
+    }
+    .kako {
+        height: auto;
+    }
+    .kako article div {
+        flex: 0 0 100%;
+    }
+    .kako article iframe {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .kako article .city{
+        padding: 30px 20px;
+    }
+    .kako article .city .col {
+        flex: 0 0 47%;
+    }
+    .kako article .city .col p, .kako article .city .col span {
+        font-size: .9rem;
+    }
+    .kako article .city .col span {
+        margin-left: 3px;
+    }
+    .kontakt {
+        padding: 0px 20px;
+    }
+    .kontakt article div {
+        flex: 0 0 100%;
+    }
+    .kontakt p {
+        font-size: .9rem;
+    }
+    .kontakt article div:first-child form input:nth-child(1), .kontakt article div:first-child form input:nth-child(2), .kontakt article div:first-child form input:nth-child(3), .kontakt article div:first-child form input:nth-child(4), .kontakt article div:first-child form input:nth-child(5), .kontakt article div:first-child form input:nth-child(6) {
+        flex: 0 0 100%;
+    }
+    .kontakt article div:first-child form #aranzman, #izlet {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .kontakt article div:first-child {
+        flex: 0 0 100%;
+    }
+    .kontakt article div:last-child {
+        flex: 0 0 100%;
+    }
+    footer {
+        height: auto;
+        padding: 40px 20px;
+    }
+    footer article div {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    footer article div:last-child {
+        margin-bottom: 0px;
+    }
 }
